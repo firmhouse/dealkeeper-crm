@@ -4,7 +4,7 @@
 #case_activity
   %h2 Activiteit dossier
   
-  %div{:style => "background-color: #f0f0f0; padding: 10px;"} 
+  %div#update{:style => "background-color: #f0f0f0; padding: 10px;"} 
     %p Plaats een update
     
     = text_area_tag "update", "", :style => "padding: 5px; width: 98%; font-size: 13px; height: 80px; margin: 10px 0;"
@@ -37,7 +37,7 @@
       .meta 12 augustus 11:00
     
     .item
-      %strong Iris 
+      %strong Ilse 
       is als tweede adviseur toegevoegd.
       .meta 10 augustus 12:00
 
@@ -50,7 +50,7 @@
       %li Partij X en Partij Y
   
   .widget
-    %h3 Relevante documenten
+    %h3 Documenten
     
     .document_list
       .document
@@ -58,7 +58,7 @@
         = link_to "Overname term sheet"
   
   .widget
-    %h3 Status dossier
+    %h3 Status
     
     %p
       %strong In behandeling
