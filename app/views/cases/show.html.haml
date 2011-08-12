@@ -1,0 +1,64 @@
+#case_summary
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed libero magna. Morbi non ligula quis quam tempor aliquam dapibus vel nisl. Nullam nunc nisl, venenatis non sollicitudin nec, lobortis nec urna. Sed vitae diam eu sem pretium consequat eu in augue. 
+  
+#case_activity
+  %h2 Activiteit dossier
+  
+  %div{:style => "background-color: #f0f0f0; padding: 10px;"} 
+    %p Plaats een update
+    
+    = text_area_tag "update", "", :style => "padding: 5px; width: 98%; font-size: 13px; height: 80px; margin: 10px 0;"
+    
+    %div{:style => "text-align: right;"}
+      = submit_tag "Plaats update"
+    
+  #activity_items
+    .item
+      = image_tag "document_icon.png"
+      Nieuwe versie 
+      = link_to "Overname term sheet" 
+      beschikbaar.
+      .message
+        Artikel 3.5 aangepast om de nieuwe overname-voorwaarden te verwerken.
+      .meta 12 augustus 11:00
+      
+    .item
+      %strong Thomas
+      plaatste het volgende bericht:
+      .message
+        Sed semper condimentum purus non ornare. Integer ut lectus est, vitae dapibus ante. Vivamus eu urna erat. Nullam orci enim, malesuada id varius at, auctor et sapien. Vestibulum ornare massa a metus adipiscing sed scelerisque est tempus. Morbi varius risus sit amet purus faucibus venenatis.
+      .meta 12 augustus 8:00
+    
+    .item
+      = image_tag "document_icon.png"
+      Nieuw document
+      = link_to "Overname term sheet" 
+      beschikbaar.
+      .meta 12 augustus 11:00
+    
+    .item
+      %strong Iris 
+      is als tweede adviseur toegevoegd.
+      .meta 10 augustus 12:00
+
+- content_for :sidebar do
+  .widget
+    %h3 Informatie over dit dossier
+    %p Aliquam erat volutpat. Morbi sagittis, diam ac congue ultricies, quam metus fermentum eros, et accumsan lorem risus iaculis quam.
+    %ul
+      %li Overnamecontract
+      %li Partij X en Partij Y
+  
+  .widget
+    %h3 Relevante documenten
+    
+    .document_list
+      .document
+        = image_tag "document_icon.png"
+        = link_to "Overname term sheet"
+  
+  .widget
+    %h3 Status dossier
+    
+    %p
+      %strong In behandeling

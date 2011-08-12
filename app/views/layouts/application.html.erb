@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <div id="container">
+    
+    <div id="header">
+      <h1>Dossier: Overname bedrijf X door bedrijf A</h1>
+    </div>
+    
+    <div id="content">
+      
+      <%= yield %>
+      
+    </div>
+    
+    <div id="sidebar">
+      
+      <%= yield :sidebar %>
+      
+    </div>
 
-<%= yield %>
+  </div>
 
 </body>
 </html>

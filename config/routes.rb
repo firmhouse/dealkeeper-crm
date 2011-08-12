@@ -1,4 +1,6 @@
 DealkeeperCrm::Application.routes.draw do
+  resources :cases
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

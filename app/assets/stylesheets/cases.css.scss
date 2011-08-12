@@ -1,0 +1,86 @@
+// Place all the styles related to the Cases controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "blueprint/reset";
+@import "blueprint";
+@import "compass/css3";
+
+body {
+  font-family: "Lucida Grande", sans-serif;
+}
+
+#header {
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#container {
+  @include container;
+  
+  #content {
+    @include column(16);
+  }
+  
+  #sidebar {
+    @include column(8, true);
+  }
+}
+
+#case_summary {
+  margin-bottom: 20px;
+  padding: 10px;
+  @include border-radius;
+  font-size: 13px;
+}
+
+#case_activity {
+  @include clearfix;
+  @include border-radius;
+  h2 {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    @include background(linear-gradient(#f5fafb, darken(#f5fafb, 5%)));
+    @include border-top-radius;
+    @include text-shadow(#FFF, 0, 1px, 0);
+  }
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#activity_items {
+  margin: 20px;
+  .item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    .message {
+      padding: 5px 0;
+      padding-left: 26px;
+      border-left: 2px solid #f0f0f0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      line-height: 1.5em;
+      font-size: 14px;
+      color: #666;
+    }
+    img {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .meta {
+      margin: 10px 0;
+      color: #888;
+      font-size: 12px;
+    }
+  }
+}
